@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lan="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+        function changestyling()
+        {
+            var para=document.getElementsByTagName("p");
+          /*  para[0].style.color="red";
+            para[1].style.fontSize=30;
+            para[2].style.fontStyle="italic";
+            para[3].style.fontWeight="bold";
+            para[4].style.color="yellow"; */
+            for (var i=0;i<para.length;i++)
+            {
+                para[i].style.color="red";
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <p>paragraph 1</p>
+    <p>paragraph 2</p>
+    <p>paragraph 3</p>
+    <p>paragraph 4</p>
+    <p>paragraph 5</p><br>
+    <button onclick="changestyling()">Click On</button>
+    
+</body>
+</html>

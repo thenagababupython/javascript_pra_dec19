@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<h2>select jquery</h2>
+<p>this is first paragraph</p>
+<div id="firstdiv" class="mydiv">
+    <p>this is first paragraph in first division</p>
+    <p>this is second paragraph in first division</p>
+</div>
+<div id="seconddiv" class="mydiv">
+    <p>this first paragraph in second division</p>
+</div>
+<div id="thirddiv" class="mydiv">
+    <ul>
+        <li>listi item in 1</li>
+        <li>listi item in 2</li>
+        <li>listi item in 3</li>
+        <li>listi item in 4</li>
+    </ul>
+</div>
+<button id="btn3">click me</button>
+<br><br>
+
+
+<div id="cube" class="mycube">
+    <p>cube</p>
+</div>
+</body>
+<script src="js/jquery-3.4.1.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#btn3").click(function(){
+            $("#cube").animate({
+                left:'150px',
+                opacity:'1',
+                width:'100px',
+                height:'100px'
+            },1000)
+        })
+    })
+   
+</script>
+</html>

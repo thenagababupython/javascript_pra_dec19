@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>getelementclass</title>
+    </head>
+    <script type="text/javascript">
+        function change(){
+            var myclasss=document.getElementsByClassName("mypara");
+            for(var x=0;x<myclasss.length;x++)
+            {
+                myclasss[x].style.color="red";
+            }
+        }
+        
+
+    </script>
+    <body>
+        <p class="mypara">paragaraph 1</p>
+        <p>paragaraph 2</p>
+        <p class="mypara">paragaraph 3</p>
+        <p>paragaraph 4</p>
+        <p class="mypara">paragaraph 5</p>
+        <a href="#" class="mypara">nagababu</a>
+        <button onclick="change()">click me</button>
+    </body>
+</html>

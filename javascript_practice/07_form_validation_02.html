@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+ <script type="text/javascript">
+        function validate1()
+        {
+        var uname = document.getElementById("usr");
+        var pword = document.getElementById("pwd1");
+        if(uname.value.trim()=="")
+        {
+          //  alert("please enter your user name: ")
+            uname.style.border="solid 3px red"
+            document.getElementById("ibluser").style.visibility="visible"
+            return false;
+        }
+        else if(pword.value.trim()=="")
+        {
+            alert("please enter password:")
+            return false;
+
+        }
+        else if(pword.value.trim().length<5)
+        {
+            alert("password must be 5 letters")
+            return false;
+
+        }
+        else
+        {
+           return true 
+        }
+        
+        }
+ </script>
+</head>
+<body>
+    <form  onsubmit="return validate1()" action="01_1_selectbox.html">
+        <input type="text"   id="usr"   placeholder="username">
+        <label id="ibluser" style="color: red ;visibility:hidden;">invalid</label>
+        <br><br>
+        <input type="password"   id="pwd1"   placeholder="password"><br>
+        <button type="submit">submit</button>
+
+    </form>
+    
+</body>
+</html>

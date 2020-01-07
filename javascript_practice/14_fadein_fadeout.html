@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+        var opacity=0;
+        var intervalId=0;
+        function fadeout()
+        {
+            intervalid=setInterval(hide,20);
+        }
+        function fadein()
+        {
+            intervalid=setInterval(show,20);
+        }
+        function show()
+        {
+            var img =document.getElementById("img");
+            opacity=Number(window.getComputedStyle(img).getPropertyValue("opacity"))
+            if(opacity<1)
+                {
+                    opacity=opacity+0.1;
+                    img.style.opacity=opacity;
+                }
+            else
+                {
+                    clearInterval(intervalId);
+                }
+    
+        function hide()
+        {
+            var img =document.getElementById("img");
+            opacity=Number(window.getComputedStyle(img).getPropertyValue("opacity"))
+            if(opacity>0)
+                {
+                    opacity=opacity-0.1;
+                    img.style.opacity=opacity;
+                }
+            else
+                {
+                    clearInterval(intervalId);
+                }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="fadein()" id="btnadd">FadeIn</button><br><br>
+    <img src="img/img1.jfif" width="250px" id="img"><br><br>
+    <button onclick="fadeout()" id="btnstop">Fadeout</button>
+      
+    
+</body>
+</html>

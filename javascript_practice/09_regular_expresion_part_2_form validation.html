@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <script type="text/javascript">
+        //regular expressions used performm powerful pattern matching and search and replace funtion on exit
+        // E00-tanmay-software-developer
+        function validate()
+        {
+            var username = document.getElementById("uname").value;
+           // var regx= new RegExp("E00","i")
+            var regx = /[^a-z]abc/;
+            if(regx.test(username))
+            {
+                alert("valid user name");
+                document.getElementById("lbluster").style.visibility="hidden";
+
+            }
+            else
+            { 
+                //alert("invalid username");
+                document.getElementById("lbluster").style.visibility="visible";
+            }
+        }
+    </script>
+</head>
+<body>
+<form action="01_1_selectbox.html">
+
+        
+<input id="text1"   type="text" placeholder="cellphone"><br>
+<label id="lbluster" style="color: red;visibility:hidden"> invalid username</label>
+<br>
+<button onclick="validate()">Click me</button>
+
+
+</form>
+</body>
+</html>

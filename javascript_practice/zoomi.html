@@ -1,0 +1,52 @@
+<html>
+    <head>
+    <title>zoomin </title>
+    <script type="text/javascript">
+        var width=100;
+        var difference=2;
+		var interveralID=0;
+        
+        
+        function increase()
+        {
+			clearInterval(interveralID);
+            intervalId= setInterval(expand,20);
+        } 
+        function decrease()
+        {
+
+			clearInterval(interveralID);
+            intervalId= setInterval(shrink,20);
+        } 
+
+        function expand()
+        {
+            if(width<200)
+            {
+                width=width+difference;
+                document.getElementById("img1").style.width=width;
+            }  
+            else{
+                clearInterval(interveralID)
+            } 
+        }  
+        function shrink()
+            {
+                if(width>100)
+                {
+                    width=width-difference;
+                    document.getElementById("img1").style.width=width;
+                }  
+                else{
+                    clearInterval(interveralID)
+                }                 
+        }
+    
+    </script>
+    </head>
+    <body>
+        <br><br>
+        <img src="img/img1.jfif" onmouseover="increase()"  onmouseout="decrease()" id="img1" width="300px"/>
+
+    </body>
+</html>
